@@ -1,0 +1,19 @@
+/* src/components/Navigation/Navigation.module.css */
+
+
+.logoutButton {
+    background-color: #ff4d4d;
+    /* червоний фон */
+    color: white;
+    /* білий текст */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logoutButton:hover {
+    background-color: #ff1a1a;
+    /* темніший червоний при наведенні */
+}
