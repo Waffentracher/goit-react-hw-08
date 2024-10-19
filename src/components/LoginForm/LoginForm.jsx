@@ -1,6 +1,8 @@
+
 import { useDispatch } from 'react-redux';
 import { Formik, Form, Field } from 'formik';
 import { login } from '../../redux/auth/operations';
+import styles from './LoginForm.module.css'; // Підключення CSS файлу
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -11,13 +13,16 @@ const LoginForm = () => {
   };
 
   return (
-    <Formik initialValues={{ email: '', password: '' }} onSubmit={handleSubmit}>
-      <Form>
-        <Field type="email" name="email" placeholder="Email" />
-        <Field type="password" name="password" placeholder="Password" />
-        <button type="submit">Login</button>
-      </Form>
-    </Formik>
+    <div className={styles.formContainer}>
+      <h2 className={styles.formTitle}>Login</h2>
+      <Formik initialValues={{ email: '', password: '' }} onSubmit={handleSubmit}>
+        <Form>
+          <Field className={styles.formField} type="email" name="email" placeholder="Email" />
+          <Field className={styles.formField} type="password" name="password" placeholder="Password" />
+          <button className={styles.formButton} type="submit">Login</button>
+        </Form>
+      </Formik>
+    </div>
   );
 };
 

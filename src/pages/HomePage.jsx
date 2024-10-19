@@ -1,5 +1,10 @@
-import styles from './HomePage.module.css'; 
 
-const HomePage = () => <h1 className={styles.title}>Welcome to the Contact Book App!</h1>; 
+import styles from './HomePage.module.css'; // Підключення CSS файлу
+
+const HomePage = () => (
+  <div className={styles.homePage}>
+    <h1>Welcome to the Contact Book App!</h1>
+  </div>
+);
 
 export default HomePage;

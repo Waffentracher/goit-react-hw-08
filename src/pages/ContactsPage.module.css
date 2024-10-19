@@ -1,41 +1,22 @@
-/* styles for ContactsPage */
-.contacts-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* ContactsPage.module.css */
+
+.contactsPage {
+    max-width: auto;
+    margin: 0 auto;
     padding: 20px;
+    background-color: #f0f0f0;
+    /* Світлий фон */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Тінь блоку */
 }
 
-.contacts-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.contactsPage h2 {
     color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.contacts-list {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-}
-
-.contacts-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-.contacts-item:last-child {
-    border-bottom: none;
-}
-
-.contacts-item-name {
-    font-size: 1.2rem;
-}
-
-.contacts-item-actions {
-    display: flex;
-    gap: 10px;
+.contactsPage>div {
+    margin-bottom: 20px;
 }

@@ -1,0 +1,27 @@
+/* UserMenu.module.css */
+
+.userMenu {
+    display: flex;
+    align-items: center;
+}
+
+.userMenu p {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.userMenu button {
+    background-color: #dc3545;
+    /* Червоний колір кнопки */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.userMenu button:hover {
+    background-color: #c82333;
+    /* Темніший червоний колір при наведенні */
+}

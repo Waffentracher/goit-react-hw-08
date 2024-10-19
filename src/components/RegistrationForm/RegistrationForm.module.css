@@ -1,0 +1,45 @@
+/* RegistrationForm.module.css */
+
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.inputField {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #5c5c5c;
+}
+
+.button:disabled {
+    background-color: #b3c7f9;
+    cursor: not-allowed;
+}
+
+.formTitle {
+    text-align: center;
+    /* Відцентрувати текст по центру */
+}

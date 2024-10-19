@@ -1,20 +1,12 @@
-.home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
+/* HomePage.module.css */
 
-.home-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.home-description {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 600px;
+.homePage {
     text-align: center;
+    margin-top: 50px;
+}
+
+.homePage h1 {
+    font-size: 3rem;
+    color: #333;
+    /* Темний колір тексту */
 }
