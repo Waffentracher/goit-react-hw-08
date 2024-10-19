@@ -1,56 +1,53 @@
-
-import PropTypes from 'prop-types'; // Додайте це
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addContact } from '../../redux/contacts/contactsOps';
 import styles from './ContactsForm.module.css';
 
-const ContactForm = ({ onSubmit }) => {
-  const formik = useFormik({
-    initialValues: {
-      name: '',
-      number: '',
-    },
-    validationSchema: Yup.object({
-      name: Yup.string().required('Required'),
-      number: Yup.string().required('Required'),
-    }),
-    onSubmit: (values, { resetForm }) => {
-      onSubmit(values);
-      resetForm();
-    },
-  });
+const ContactsForm = () => {
+  const dispatch = useDispatch();
+  const [name, setName] = useState('');
+  const [number, setNumber] = useState('');
+
+  const handleNumberChange = e => {
+    const onlyNumbers = e.target.value.replace(/\D/g, '');
+    setNumber(onlyNumbers);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (!name || !number) return;
+    dispatch(addContact({ name, number }));
+    setName('');
+    setNumber('');
+  };
 
   return (
-    <form onSubmit={formik.handleSubmit} className={styles.form}>
-      <label htmlFor="name">
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <label className={styles.label}>
         Name
         <input
-          id="name"
-          name="name"
           type="text"
-          onChange={formik.handleChange}
-          value={formik.values.name}
+          value={name}
+          onChange={e => setName(e.target.value)}
+          className={styles.input}
+          required
         />
-        {formik.errors.name ? <div>{formik.errors.name}</div> : null}
       </label>
-      <label htmlFor="number">
+      <label className={styles.label}>
         Number
         <input
-          id="number"
-          name="number"
           type="text"
-          onChange={formik.handleChange}
-          value={formik.values.number}
+          value={number}
+          onChange={handleNumberChange}
+          className={styles.input}
+          pattern="[0-9]*"
+          title="Please enter a valid phone number"
+          required
         />
-        {formik.errors.number ? <div>{formik.errors.number}</div> : null}
       </label>
-      <button type="submit">Add contact</button>
+      <button type="submit" className={styles.button}>Add Contact</button>
     </form>
   );
 };
 
-ContactForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
-
-export default ContactForm;
+export default ContactsForm;
