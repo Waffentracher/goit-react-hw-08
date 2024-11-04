@@ -1,19 +1,27 @@
-/* LoginPage.module.css */
-
 .loginPage {
-    max-width: auto;
-    
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Центрує вертикально */
     padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f0f2f5;
 }
 
-.loginPage h2 {
-    font-size: 1.5rem;
+h2 {
+    font-size: 24px;
     margin-bottom: 20px;
-    text-align: center;
     color: #333;
+    text-align: center;
+}
+
+.loginForm {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

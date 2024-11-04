@@ -1,5 +1,5 @@
 
-import styles from './HomePage.module.css'; // Підключення CSS файлу
+import styles from './HomePage.module.css'; 
 
 const HomePage = () => (
   <div className={styles.homePage}>

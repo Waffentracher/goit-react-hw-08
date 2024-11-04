@@ -23,11 +23,13 @@ const ContactsPage = () => {
 
       {isLoading && <p>Loading contacts...</p>}
       {error && <p>Error loading contacts: {error}</p>}
-      
-      <SearchBox />
 
       <div>
         <ContactsForm />
+      </div>
+      
+      <div>
+        <SearchBox />
       </div>
 
       <div>
