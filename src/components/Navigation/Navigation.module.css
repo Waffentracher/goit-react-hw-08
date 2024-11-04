@@ -1,11 +1,10 @@
-/* Navigation.module.css */
+
 
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #454647;
-    /* змініть колір фону на потрібний */
     padding: 10px;
 }
 
@@ -19,6 +18,4 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #848485;
-    /* змініть колір фону при наведенні */
-}
+    background-color: #848485;}

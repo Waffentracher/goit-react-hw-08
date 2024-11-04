@@ -1,17 +1,15 @@
-import PropTypes from 'prop-types';
+import { Outlet } from 'react-router-dom';
 import AppBar from './AppBar';
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <>
       <AppBar />
-      <main>{children}</main>
+      <main>
+        <Outlet /> 
+      </main>
     </>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node, 
 };
 
 export default Layout;
