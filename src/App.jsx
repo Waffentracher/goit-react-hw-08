@@ -11,6 +11,7 @@ import PrivateRoute from './components/Routes/PrivateRoute';
 import RestrictedRoute from './components/Routes/RestrictedRoute';
 import Layout from './components/Layout/Layout';
 import './App.css';
+
 const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
@@ -33,7 +34,10 @@ const App = () => {
           path="/login"
           element={<RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />}
         />
-        <Route path="/contacts" element={<PrivateRoute redirectTo="/login" component={<ContactsPage />} />} />
+        <Route
+          path="/contacts"
+          element={<PrivateRoute redirectTo="/login" component={<ContactsPage />} />}
+        />
       </Route>
     </Routes>
   );
